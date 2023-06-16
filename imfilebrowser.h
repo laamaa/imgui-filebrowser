@@ -1,5 +1,6 @@
 ﻿#pragma once
 
+#include "imgui.h"
 #include <algorithm>
 #include <array>
 #include <cctype>
@@ -583,7 +584,7 @@ inline void ImGui::FileBrowser::Display()
                 }
             }
 
-            if(IsItemClicked(0) && IsMouseDoubleClicked(0))
+            if(IsItemActivated())
             {
                 if(rsc.isDir)
                 {
